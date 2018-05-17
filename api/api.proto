@@ -214,6 +214,26 @@ service Wallet {
       body: "*"
     };
   }
+  rpc DeployContract (ContractDeployContract) returns (Transaction) {
+    option (google.api.http) = {
+      post: "/wallet/deploycontract"
+      body: "*"
+    };
+  }
+  rpc TriggerContract (ContractTriggerContract) returns (Transaction) {
+    option (google.api.http) = {
+      post: "/wallet/triggercontract"
+      body: "*"
+    };
+  }
+  rpc GetContract (BytesMessage) returns (Transaction) {
+    option (google.api.http) = {
+      post: "/wallet/getcontract"
+      body: "*"
+    };
+  }
+};
+
 };
 
 
