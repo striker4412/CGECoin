@@ -502,3 +502,9 @@ message SmartContract {
   string name = 7;
 
 }
+
+message DelegatedResourceAccountIndex {
+  bytes account = 1;
+  repeated bytes fromAccounts = 2;
+  repeated bytes toAccounts = 3;
+}
